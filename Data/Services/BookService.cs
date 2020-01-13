@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Summaries.Data
 {
@@ -11,7 +12,8 @@ namespace Summaries.Data
 
         public void DeleteBook(int id)
         {
-            throw new System.NotImplementedException();
+            var book = Data.Books.FirstOrDefault(b => b.Id == id);
+            Data.Books.Remove(book);
         }
 
         public List<Book> GetAllBooks()
@@ -19,14 +21,19 @@ namespace Summaries.Data
             return Data.Books;
         }
 
-        public Book GetBookById(int Id)
+        public Book GetBookById(int id)
         {
-            throw new System.NotImplementedException();
+            return Data.Books.FirstOrDefault(b => b.Id == id);
         }
 
         public void UpdateBook(int id, Book newBook)
         {
-            throw new System.NotImplementedException();
+            var book = Data.Books.FirstOrDefault(b => b.Id == id);
+            if (book != null)
+            {
+                book = newBook;
+            }
+            
         }
     }
 }

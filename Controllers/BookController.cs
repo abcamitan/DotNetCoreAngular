@@ -3,7 +3,7 @@ using Summaries.Data;
 
 namespace Summaries.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("/api/[controller]")]
     public class BookController : Controller
     {
         private IBookService  _service;
@@ -25,6 +25,27 @@ namespace Summaries.Controllers
         {
             var allbooks = _service.GetAllBooks();
             return Ok(allbooks);
+        }
+
+        [HttpPut("UpdateBook/{id}")]
+        public IActionResult UpdateBook(int id, [FromBody]Book book)
+        {
+            _service.UpdateBook(id, book);
+            return Ok(book);
+        }
+
+        [HttpDelete("DeleteBook/{id}")]
+        public IActionResult DeleteBook(int id)
+        {
+            _service.DeleteBook(id);
+            return Ok();
+        }
+
+        [HttpGet("SingleBook/{id}")]
+        public IActionResult GetBookById(int id)
+        {
+            var book = _service.GetBookById(id);
+            return Ok(book);
         }
     }
 }
