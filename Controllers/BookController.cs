@@ -20,5 +20,11 @@ namespace Summaries.Controllers
             return Ok("Added");
         }
 
+        [HttpGet("[action]")]
+        public IActionResult GetBooks()
+        {
+            var allbooks = _service.GetAllBooks();
+            return Ok(allbooks);
+        }
     }
 }
