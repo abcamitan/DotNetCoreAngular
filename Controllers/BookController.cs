@@ -3,6 +3,7 @@ using Summaries.Data;
 
 namespace Summaries.Controllers
 {
+    [Route("api/[controller]")]
     public class BookController : Controller
     {
         private IBookService  _service;
