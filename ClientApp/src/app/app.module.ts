@@ -9,10 +9,10 @@ import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { BooksComponent } from './components/books/books.component';
 import { DeleteBookComponent } from './components/delete-book/delete-book.component';
-import { NewBookComponent } from './components/new-book/new-book.component';
 import { ShowBookComponent } from './components/show-book/show-book.component';
 import { UpdateBookComponent } from './components/update-book/update-book.component';
 import { BookService } from './services/book.service';
+import { AddBookComponent } from './components/add-book/add-book.component';
 
 @NgModule({
   declarations: [
@@ -21,9 +21,9 @@ import { BookService } from './services/book.service';
     HomeComponent,
     BooksComponent,
     DeleteBookComponent,
-    NewBookComponent,
     ShowBookComponent,
-    UpdateBookComponent
+    UpdateBookComponent,
+    AddBookComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -32,7 +32,7 @@ import { BookService } from './services/book.service';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'books', component: BooksComponent},
-      { path: 'new-book', component: NewBookComponent},
+      { path: 'add-book', component: AddBookComponent},
       { path: 'update-book/:id', component: UpdateBookComponent},
       { path: 'delete-book/:id', component: DeleteBookComponent},
       { path: 'show-book/:id', component: ShowBookComponent}
