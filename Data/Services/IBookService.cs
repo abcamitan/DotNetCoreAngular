@@ -7,7 +7,7 @@ namespace DotNetCoreAngular.Data.Services
     {
         List<Book> GetAllBooks();
         Book GetBookById(int Id);
-        void UpdateBook(int id, Book newBook);
+        Book UpdateBook(int id, Book newBook);
         void DeleteBook(int id);
         void AddBook(Book newBook);
     }

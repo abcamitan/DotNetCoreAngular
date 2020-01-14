@@ -27,14 +27,19 @@ namespace DotNetCoreAngular.Data.Services
             return Data.Books.FirstOrDefault(b => b.Id == id);
         }
 
-        public void UpdateBook(int id, Book newBook)
+        public Book UpdateBook(int id, Book newBook)
         {
             var book = Data.Books.FirstOrDefault(b => b.Id == id);
             if (book != null)
             {
-                book = newBook;
+                book.Author = newBook.Author;
+                book.Description = newBook.Description;
+                book.Title = newBook.Title;
+                book.Rate = newBook.Rate;
+                book.DateStart = newBook.DateStart;
+                book.DateRead = newBook.DateRead;
             }
-            
+            return book;
         }
     }
 }

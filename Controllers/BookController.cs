@@ -30,9 +30,8 @@ namespace DotNetCoreAngular.Controllers
 
         [HttpPut("UpdateBook/{id}")]
         public IActionResult UpdateBook(int id, [FromBody]Book book)
-        {
-            _service.UpdateBook(id, book);
-            return Ok(book);
+        {            
+            return Ok(_service.UpdateBook(id, book));
         }
 
         [HttpDelete("DeleteBook/{id}")]

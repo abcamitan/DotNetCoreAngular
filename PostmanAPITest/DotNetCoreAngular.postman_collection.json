@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "6b61fb79-d7a6-4b86-973f-1ed1105448f8",
+		"name": "DotNetCoreAngular",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\":11,\r\n    \"Title\":\"Harold and Kumar\",\r\n    \"Description\":\"Book about the comedy movie...\",\r\n    \"Author\": \"Harold\",\r\n    \"Rate\": 4.9,\r\n    \"DateStart\": \"2019-02-23\",\r\n    \"DateRead\": \"2019-03-23\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/book/addbook",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"book",
+						"addbook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Book",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/book",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateBook",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\":11,\r\n    \"Title\":\"Harold and Kumar II\",\r\n    \"Description\":\"Book about the comedy movie...\",\r\n    \"Author\": \"Harold\",\r\n    \"Rate\": 4.9,\r\n    \"DateStart\": \"2019-04-23\",\r\n    \"DateRead\": \"2019-05-23\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/book/updatebook/11",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"book",
+						"updatebook",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/book/deletebook/11",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"book",
+						"deletebook",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single Book",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/book/singlebook/11",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"book",
+						"singlebook",
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
