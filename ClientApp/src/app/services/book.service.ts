@@ -18,15 +18,15 @@ export class BookService {
     return this.http.post(this._baseURL+"AddBook", book);
   }
 
-  updateBook(id, book: Book){
+  updateBook(id: number, book: Book){
     return this.http.put<Book>(this._baseURL+"UpdateBook/"+ id, book);
   }
 
-  deleteBook(id){
+  deleteBook(id: number){
     return this.http.delete(this._baseURL+"DeleteBook/"+ id);
   }
 
-  showBook(id){
+  showBook(id: number){
     return this.http.get<Book>(this._baseURL+"SingleBook/"+ id);
   }
 
