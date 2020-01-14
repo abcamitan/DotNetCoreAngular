@@ -18,8 +18,8 @@ export class BookService {
     return this.http.post(this._baseURL+"AddBook", book);
   }
 
-  updateBook(id: number, book: Book){
-    return this.http.put<Book>(this._baseURL+"UpdateBook/"+ id, book);
+  updateBook(book: Book){
+    return this.http.put<Book>(this._baseURL+"UpdateBook/"+ book.id, book);
   }
 
   deleteBook(id: number){
