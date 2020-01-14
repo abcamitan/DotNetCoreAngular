@@ -67,7 +67,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:5001/api/book",
+					"raw": "https://localhost:5001/api/book/getbooks",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -75,7 +75,8 @@
 					"port": "5001",
 					"path": [
 						"api",
-						"book"
+						"book",
+						"getbooks"
 					]
 				}
 			},
