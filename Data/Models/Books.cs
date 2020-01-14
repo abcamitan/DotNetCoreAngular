@@ -1,6 +1,6 @@
 using System;
 
-namespace Summaries.Data
+namespace DotNetCoreAngular.Data.Models
 {
     public class Book
     {

@@ -1,9 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
-using Summaries.Data;
+using DotNetCoreAngular.Data.Services;
+using DotNetCoreAngular.Data.Models;
 
-namespace Summaries.Controllers
+namespace DotNetCoreAngular.Controllers
 {
-    [Route("/api/[controller]")]
+    [Route("api/[controller]")]
     public class BookController : Controller
     {
         private IBookService  _service;

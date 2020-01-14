@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
+using DotNetCoreAngular.Data.Models;
 
-namespace Summaries.Data
+namespace DotNetCoreAngular.Data.Services
 {
     public class BookService : IBookService
     {

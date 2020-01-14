@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
+using DotNetCoreAngular.Data.Models;
 
-namespace Summaries.Data
+namespace DotNetCoreAngular.Data
 {
     public static class Data
     {

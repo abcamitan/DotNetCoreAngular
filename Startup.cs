@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Summaries.Data;
+using DotNetCoreAngular.Data.Services;
 
 namespace DotNetCoreAngular
 {

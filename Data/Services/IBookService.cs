@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using DotNetCoreAngular.Data.Models;
 
-namespace Summaries.Data
+namespace DotNetCoreAngular.Data.Services
 {
     public interface IBookService
     {
