@@ -23,7 +23,7 @@ export class BookService {
   }
 
   deleteBook(id){
-    return this.http.delete(this._baseURL+"DeleteBook"+ id);
+    return this.http.delete(this._baseURL+"DeleteBook/"+ id);
   }
 
   showBook(id){
