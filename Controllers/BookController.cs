@@ -21,7 +21,7 @@ namespace DotNetCoreAngular.Controllers
             return Ok("Added");
         }
 
-        [HttpGet("[action]")]
+        [HttpGet]
         public IActionResult GetBooks()
         {
             var allbooks = _service.GetAllBooks();
