@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using DotNetCoreAngular.Data.Services;
 using DotNetCoreAngular.Data.Models;
+using System;
 
 namespace DotNetCoreAngular.Controllers
 {
@@ -17,8 +18,17 @@ namespace DotNetCoreAngular.Controllers
         [HttpPost("AddBook")]
         public IActionResult AddBook([FromBody]Book book)
         {
-            _service.AddBook(book);
-            return Ok();
+            try
+            {
+                if (book.Title != null && book.Author != null && book.Description != null) {
+                    _service.AddBook(book);
+                    return Ok(book);
+                }
+                return BadRequest("No Book was added");
+            }
+            catch (Exception e){
+                return BadRequest(e.Message);
+            }            
         }
 
         [HttpGet("GetBooks")]
