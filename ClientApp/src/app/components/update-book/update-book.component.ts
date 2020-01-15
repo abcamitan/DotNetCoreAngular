@@ -43,7 +43,7 @@ export class UpdateBookComponent implements OnInit {
 
   onSubmit(){
     this.service.updateBook(this.updateBookForm.value).subscribe(data =>{
-      this.router.navigate(["/show-book",this.book.id]);
+      this.router.navigate(["/books"]);
     });
   }
 }
