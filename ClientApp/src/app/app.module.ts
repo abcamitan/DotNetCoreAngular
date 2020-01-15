@@ -13,10 +13,10 @@ import { ShowBookComponent } from './components/show-book/show-book.component';
 import { UpdateBookComponent } from './components/update-book/update-book.component';
 import { BookService } from './services/book.service';
 import { AddBookComponent } from './components/add-book/add-book.component';
-import { StoreModule } from '@ngrx/store';
-import { BookReducer } from './store/book.reducer';
-import { Effect, EffectsModule } from '@ngrx/effects';
-import { BookEffects } from './store/book.effects';
+// import { StoreModule } from '@ngrx/store';
+// import { BookReducer } from './store/book.reducer';
+// import { Effect, EffectsModule } from '@ngrx/effects';
+// import { BookEffects } from './store/book.effects';
 
 @NgModule({
   declarations: [
@@ -41,9 +41,9 @@ import { BookEffects } from './store/book.effects';
       { path: 'update-book/:id', component: UpdateBookComponent},
       { path: 'delete-book/:id', component: DeleteBookComponent},
       { path: 'show-book/:id', component: ShowBookComponent}
-    ]),
-    StoreModule.forRoot({applicationState: BookReducer}),
-    EffectsModule.forRoot([BookEffects])
+    ])//,
+    // StoreModule.forRoot({applicationState: BookReducer}),
+    // EffectsModule.forRoot([BookEffects])
   ],
   providers: [BookService],
   bootstrap: [AppComponent]
